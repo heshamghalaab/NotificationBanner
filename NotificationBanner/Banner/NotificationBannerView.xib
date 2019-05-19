@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationBannerView" customModule="NotificationBanner" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="Gbx-Mn-2MW" id="tuC-PA-ze5"/>
+                <outlet property="messageLabel" destination="XX6-m8-DxW" id="NDg-iW-RCF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Gbx-Mn-2MW">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVr-4z-Df1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="I54-be-d7T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XX6-m8-DxW">
+                                <rect key="frame" x="8" y="41.5" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddp-xa-2hc">
+                                <rect key="frame" x="157" y="90" width="100" height="5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2T1-dO-h1v"/>
+                                    <constraint firstAttribute="height" constant="5" id="pcz-5f-6UW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XX6-m8-DxW" secondAttribute="trailing" constant="8" id="0Lk-mR-d3O"/>
+                            <constraint firstAttribute="bottom" secondItem="Ddp-xa-2hc" secondAttribute="bottom" constant="8" id="7jA-bA-pum"/>
+                            <constraint firstItem="Ddp-xa-2hc" firstAttribute="centerX" secondItem="I54-be-d7T" secondAttribute="centerX" id="IKU-K5-GBn"/>
+                            <constraint firstItem="XX6-m8-DxW" firstAttribute="centerY" secondItem="I54-be-d7T" secondAttribute="centerY" id="Oee-wi-39Q"/>
+                            <constraint firstItem="XX6-m8-DxW" firstAttribute="leading" secondItem="I54-be-d7T" secondAttribute="leading" constant="8" id="VDU-rL-pgi"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YVr-4z-Df1" firstAttribute="leading" secondItem="skm-aC-ser" secondAttribute="leading" id="63C-ub-Dy4"/>
+                <constraint firstItem="YVr-4z-Df1" firstAttribute="trailing" secondItem="skm-aC-ser" secondAttribute="trailing" id="QHR-es-x3x"/>
+                <constraint firstAttribute="bottom" secondItem="YVr-4z-Df1" secondAttribute="bottom" id="WvD-yn-Fjl"/>
+                <constraint firstItem="YVr-4z-Df1" firstAttribute="top" secondItem="Gbx-Mn-2MW" secondAttribute="top" id="lcN-5k-oeg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="skm-aC-ser"/>
+            <point key="canvasLocation" x="66.666666666666671" y="-137.61160714285714"/>
+        </view>
+    </objects>
+</document>

@@ -14,6 +14,11 @@
 		9C8246EC229212370093D5F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8246EA229212370093D5F5 /* LaunchScreen.storyboard */; };
 		9C8246F7229212370093D5F5 /* NotificationBannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8246F6229212370093D5F5 /* NotificationBannerTests.swift */; };
 		9C824702229212370093D5F5 /* NotificationBannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C824701229212370093D5F5 /* NotificationBannerUITests.swift */; };
+		9C824711229213430093D5F5 /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C824710229213430093D5F5 /* NotificationBanner.swift */; };
+		9C8247132292136A0093D5F5 /* NotificationBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8247122292136A0093D5F5 /* NotificationBannerView.swift */; };
+		9C824715229213870093D5F5 /* NotificationBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C824714229213870093D5F5 /* NotificationBannerView.xib */; };
+		9C824717229213C70093D5F5 /* NotificationBannerViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C824716229213C70093D5F5 /* NotificationBannerViewProtocol.swift */; };
+		9C82471922921C5B0093D5F5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9C82471822921C5B0093D5F5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		9C8246FD229212370093D5F5 /* NotificationBannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationBannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C824701229212370093D5F5 /* NotificationBannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerUITests.swift; sourceTree = "<group>"; };
 		9C824703229212370093D5F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C824710229213430093D5F5 /* NotificationBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
+		9C8247122292136A0093D5F5 /* NotificationBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerView.swift; sourceTree = "<group>"; };
+		9C824714229213870093D5F5 /* NotificationBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationBannerView.xib; sourceTree = "<group>"; };
+		9C824716229213C70093D5F5 /* NotificationBannerViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerViewProtocol.swift; sourceTree = "<group>"; };
+		9C82471822921C5B0093D5F5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 		9C8246D5229212350093D5F5 = {
 			isa = PBXGroup;
 			children = (
+				9C82471822921C5B0093D5F5 /* README.md */,
 				9C8246E0229212350093D5F5 /* NotificationBanner */,
 				9C8246F5229212370093D5F5 /* NotificationBannerTests */,
 				9C824700229212370093D5F5 /* NotificationBannerUITests */,
@@ -97,6 +108,7 @@
 		9C8246E0229212350093D5F5 /* NotificationBanner */ = {
 			isa = PBXGroup;
 			children = (
+				9C82470F229213340093D5F5 /* Banner */,
 				9C8246E1229212350093D5F5 /* AppDelegate.swift */,
 				9C8246E3229212350093D5F5 /* ViewController.swift */,
 				9C8246E5229212350093D5F5 /* Main.storyboard */,
@@ -123,6 +135,17 @@
 				9C824703229212370093D5F5 /* Info.plist */,
 			);
 			path = NotificationBannerUITests;
+			sourceTree = "<group>";
+		};
+		9C82470F229213340093D5F5 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9C824710229213430093D5F5 /* NotificationBanner.swift */,
+				9C8247122292136A0093D5F5 /* NotificationBannerView.swift */,
+				9C824714229213870093D5F5 /* NotificationBannerView.xib */,
+				9C824716229213C70093D5F5 /* NotificationBannerViewProtocol.swift */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +254,9 @@
 			files = (
 				9C8246EC229212370093D5F5 /* LaunchScreen.storyboard in Resources */,
 				9C8246E9229212370093D5F5 /* Assets.xcassets in Resources */,
+				9C82471922921C5B0093D5F5 /* README.md in Resources */,
 				9C8246E7229212350093D5F5 /* Main.storyboard in Resources */,
+				9C824715229213870093D5F5 /* NotificationBannerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C824711229213430093D5F5 /* NotificationBanner.swift in Sources */,
 				9C8246E4229212350093D5F5 /* ViewController.swift in Sources */,
 				9C8246E2229212350093D5F5 /* AppDelegate.swift in Sources */,
+				9C824717229213C70093D5F5 /* NotificationBannerViewProtocol.swift in Sources */,
+				9C8247132292136A0093D5F5 /* NotificationBannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

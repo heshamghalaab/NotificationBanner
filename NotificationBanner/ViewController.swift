@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func showBanner(_ sender: UIButton) {
+        let banner = NotificationBanner()
+        banner.show("No Internet Connection!")
+    }
+    
 }
 
