@@ -14,7 +14,7 @@ class NotificationBanner {
     private var bannerTopConstraint: NSLayoutConstraint?
     private var superView: UIView?
     
-    private let animateDuration = 0.5
+    private let animateDuration = 0.3
     private let bannerAppearanceDuration: TimeInterval = 2
     private let bannerHeight: CGFloat = 100
     private var bannerWidth = CGFloat()
@@ -25,9 +25,12 @@ class NotificationBanner {
      - Parameter text: text to alert the user in the banner.
      */
     public func show(_ text: String) {
-        initialization()
-        addNotificationBannerView(withText: text)
-        expandBanner()
+        DispatchQueue.main.async {
+            self.initialization()
+            self.addNotificationBannerView(withText: text)
+            self.expandBanner()
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + bannerAppearanceDuration) { [weak self] in
             self?.collapseBanner()
         }
@@ -53,11 +56,13 @@ class NotificationBanner {
         superView?.addSubview(bannerView!)
         
         bannerView?.widthAnchor.constraint(equalToConstant: bannerWidth).isActive = true
+        bannerView?.heightAnchor.constraint(greaterThanOrEqualToConstant: bannerHeight).isActive = true
         bannerView?.leadingAnchor.constraint(equalTo: superView!.leadingAnchor).isActive = true
-        bannerView?.trailingAnchor.constraint(equalTo: superView!.trailingAnchor).isActive = true
-        bannerTopConstraint = bannerView?.topAnchor.constraint(equalTo: superView!.topAnchor)
+        bannerTopConstraint = bannerView?.topAnchor.constraint(equalTo: superView!.topAnchor, constant: -bannerHeight)
         bannerTopConstraint?.isActive = true
-        bannerView?.heightAnchor.constraint(equalToConstant: bannerHeight).isActive = true
+            
+        superView?.layoutIfNeeded()
+        
         bannerView?.message = text
         bannerView?.notificationBannerViewProtocol = self
     }
@@ -77,13 +82,13 @@ class NotificationBanner {
      - Parameter afterDelay: take 0 if user interact with it , and take 2 seconds if he has no interaction.
      */
     @objc private func collapseBanner(){
+        guard !self.isUserInteractWithBanner else {return}
+        self.bannerTopConstraint?.constant = -(bannerView?.frame.size.height ?? bannerHeight)
+        
         UIView.animate(withDuration: animateDuration, delay: 0, options: [.curveEaseInOut], animations: {
-            guard !self.isUserInteractWithBanner else {return}
-            self.bannerTopConstraint?.constant = -self.bannerHeight
             self.superView?.layoutIfNeeded()
             
         }, completion: { finished in
-            guard !self.isUserInteractWithBanner else {return}
             guard finished else { return }
             
             self.bannerView?.removeFromSuperview()

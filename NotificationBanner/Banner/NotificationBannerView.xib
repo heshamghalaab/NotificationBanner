@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XX6-m8-DxW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XX6-m8-DxW">
                                 <rect key="frame" x="8" y="41.5" width="398" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,8 +44,9 @@
                             <constraint firstAttribute="trailing" secondItem="XX6-m8-DxW" secondAttribute="trailing" constant="8" id="0Lk-mR-d3O"/>
                             <constraint firstAttribute="bottom" secondItem="Ddp-xa-2hc" secondAttribute="bottom" constant="8" id="7jA-bA-pum"/>
                             <constraint firstItem="Ddp-xa-2hc" firstAttribute="centerX" secondItem="I54-be-d7T" secondAttribute="centerX" id="IKU-K5-GBn"/>
-                            <constraint firstItem="XX6-m8-DxW" firstAttribute="centerY" secondItem="I54-be-d7T" secondAttribute="centerY" id="Oee-wi-39Q"/>
                             <constraint firstItem="XX6-m8-DxW" firstAttribute="leading" secondItem="I54-be-d7T" secondAttribute="leading" constant="8" id="VDU-rL-pgi"/>
+                            <constraint firstItem="XX6-m8-DxW" firstAttribute="top" secondItem="I54-be-d7T" secondAttribute="top" constant="41.5" id="WgC-c6-Q9j"/>
+                            <constraint firstItem="Ddp-xa-2hc" firstAttribute="top" secondItem="XX6-m8-DxW" secondAttribute="bottom" constant="28" id="pYI-WK-5cS"/>
                         </constraints>
                     </view>
                     <blurEffect style="light"/>
